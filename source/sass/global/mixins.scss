@@ -1,0 +1,51 @@
+@mixin reset($type: "all") {
+	@if $type == "list" {
+		@include reset();
+		list-style: none;
+	}
+
+	@else if $type == "content" {
+		margin: 0;
+	}
+
+	@else {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@mixin icon($icon, $mask: true) {
+	$value: url("../img/sprite.svg##{$icon}") no-repeat center / 100%;
+
+	@if $mask {
+		mask: $value;
+	}
+
+	@else {
+		background: $value;
+	}
+}
+
+@mixin retinal-image($file, $ext: "webp") {
+	background-image: url("../img/#{$file}.#{$ext}");
+
+	@media ($retina) {
+		background-image: url("../img/#{$file}@2x.#{$ext}");
+	}
+}
+
+@mixin adaptive-image($file, $ext: "webp", $desktop: true) {
+	@media ($mobile) {
+		@include retinal-image("#{$file}-mobile", $ext);
+	}
+
+	@media ($tablet-desktop) {
+		@include retinal-image("#{$file}-tablet-desktop", $ext);
+	}
+
+	@if ($desktop) {
+		@media ($desktop) {
+			@include retinal-image("#{$file}-desktop", $ext);
+		}
+	}
+}
