@@ -95,7 +95,7 @@ export const compileSass = () => {
 		.pipe(gulpif(isBuild, postcss([
 			csso()
 		])))
-		.pipe(gulpif(isBuild, rename('style.min.css')))
+		// .pipe(gulpif(isBuild, rename('style.min.css')))
 		.pipe(dest(`${outputDir}/css`))
 		.pipe(browser.reload({ stream: true }));
 }
