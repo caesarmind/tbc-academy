@@ -1,0 +1,54 @@
+.page-content__cover {
+	background: url("../img/hero-cover-mobile.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@media ($tablet-desktop) {
+		background: url("../img/hero-cover.webp");
+		background-position: center top;
+	}
+}
+
+.page-content__title {
+	margin: 0;
+	padding: 50px 0;
+	font-size: 24px;
+	line-height: 36px;
+	color: $white;
+
+	@media ($tablet-desktop) {
+		padding: 100px 0;
+		font-size: 43px;
+		line-height: 66px;
+	}
+}
+
+.page-content__info {
+	background-color: $gray;
+}
+
+.page-content__description {
+	margin: 0;
+	padding: 25px 0;
+	font-size: 16px;
+	line-height: 30px;
+	color: $white;
+
+	@media ($tablet-desktop) {
+		font-size: 28px;
+		line-height: 45px;
+	}
+}
+
+.page-content__button {
+	display: block;
+	padding: 20px 0 30px;
+	font-size: 16px;
+	color: #00aef3;
+	text-decoration: none;
+
+	@media ($tablet-desktop) {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
