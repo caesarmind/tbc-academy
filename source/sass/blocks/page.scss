@@ -1,0 +1,47 @@
+.page {
+	background-color: $gray;
+}
+
+.page__body {
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+	min-height: 100vh;
+	margin: 0 auto;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Circular XXweb", sans-serif;
+	color: $black;
+	background-color: $white;
+	box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+.page__container {
+	max-width: 980px;
+	padding: 19px 20px;
+
+	@media ($tablet-desktop) {
+		margin: 0 auto;
+		padding: 0;
+	}
+}
+
+.page__header {
+	background-color: #1a1e20;
+}
+
+.page__logo {
+	width: 130px;
+
+	@media ($tablet-desktop) {
+		width: 150px;
+	}
+}
+
+.page__header-wrapper {
+	display: flex;
+	justify-content: space-between;
+
+	@media ($tablet-desktop) {
+		align-items: center;
+	}
+}

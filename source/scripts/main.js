@@ -1,3 +1,2 @@
 import './modules/menu.js';
-import './modules/map.js';
-
+import './modules/accordion';

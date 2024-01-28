@@ -104,7 +104,7 @@ export const compileSass = () => {
 export const stackSvg = () => {
 	return src('source/img/icons/**/*.svg')
 		.pipe(imagemin([
-		   svgo(svgoConf)
+			 svgo(svgoConf)
 		 ]))
 		.pipe(stacksvg({ output: 'sprite' }))
 		.pipe(dest(`${outputDir}/img`));
