@@ -8,6 +8,10 @@
 	margin-bottom: 35px;
 	font-size: 24px;
 	color: $white;
+
+	@media ($tablet-desktop) {
+		margin-bottom: 50px;
+	}
 }
 
 .courses__list {
@@ -40,6 +44,10 @@
 
 .courses__item-title {
 	font-size: 15px;
+
+	@media ($tablet-desktop) {
+		font-size: 18px;
+	}
 }
 
 .courses__status {
